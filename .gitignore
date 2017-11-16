@@ -2,3 +2,9 @@
 *.dtb
 *.dtbo
 spi/spidev_test
+xillybus/fifo
+xillybus/memread
+xillybus/memwrite
+xillybus/streamread
+xillybus/streamwrite
+
