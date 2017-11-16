@@ -1,3 +1,4 @@
 *.o
 *.dtb
 *.dtbo
+spi/spidev_test
