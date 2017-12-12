@@ -6,7 +6,7 @@
 	             pinctrl-single,pins = <
 			       /* #define DRA7XX_CORE_IOPAD(pa, val)	(((pa) & 0xffff) - 0x3400) (val) */
 			       DRA7XX_CORE_IOPAD(0x36D4, PIN_INPUT_PULLUP  | MUX_MODE3) /* sck */
-                               DRA7XX_CORE_IOPAD(0x36D8, PIN_INPUT_PULLUP | MUX_MODE3) /* d1  */
+                               DRA7XX_CORE_IOPAD(0x36D8, PIN_INPUT_PULLUP  | MUX_MODE3) /* d1  */
                                DRA7XX_CORE_IOPAD(0x36DC, PIN_OUTPUT_PULLUP | MUX_MODE3) /* d0  */
                                DRA7XX_CORE_IOPAD(0x36E0, PIN_OUTPUT_PULLUP | MUX_MODE3) /* cs0 */
 	             >;
@@ -16,7 +16,7 @@
 
 	             pinctrl-single,pins = <
 			       /* #define DRA7XX_CORE_IOPAD(pa, val)	(((pa) & 0xffff) - 0x3400) (val) */
-			       DRA7XX_CORE_IOPAD(0x3744, PIN_INPUT_PULLUP  | MUX_MODE2)	/* sck */
+			       DRA7XX_CORE_IOPAD(0x3744, PIN_INPUT_PULLUP  | MUX_MODE2)/* sck */
                                DRA7XX_CORE_IOPAD(0x3748, PIN_INPUT_PULLUP  | MUX_MODE2) /* d1  */
                                DRA7XX_CORE_IOPAD(0x374C, PIN_OUTPUT_PULLUP | MUX_MODE2) /* d0  */
                                DRA7XX_CORE_IOPAD(0x3750, PIN_OUTPUT_PULLUP | MUX_MODE2) /* cs0 */
@@ -28,7 +28,7 @@
        status = "okay";
        pinctrl-names = "default";
        pinctrl-0 = <&mcspi3_pins>; 
-       /* ti,pindir-d0-out-d1-in = <1>; */
+       ti,pindir-d0-out-d1-in = <1>;
        spidev@3 { 
               spi-max-frequency = <24000000>;
               reg = <0>; 
@@ -40,7 +40,7 @@
        status = "okay";
        pinctrl-names = "default";
        pinctrl-0 = <&mcspi4_pins>; 
-       /* ti,pindir-d0-out-d1-in = <1>; */
+       ti,pindir-d0-out-d1-in = <1>;
        spidev@4 { 
               spi-max-frequency = <24000000>;
               reg = <0>; 
